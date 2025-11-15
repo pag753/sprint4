@@ -1,21 +1,16 @@
 services:
   beverage_predictor:
-    # 1. Instrucción para CONSTRUIR la imagen usando el Dockerfile en este directorio.
     build:
       context: . 
       dockerfile: Dockerfile
     
-    # 2. Nombre de la imagen resultante (útil para gestionar después).
     image: local-beverage-predictor:latest
     
-    # 3. Mapeo de Puertos: Expone el puerto 8080 del NAS al puerto 8000 interno de la API (Uvicorn).
     ports:
       - '8081:8000'
     
-    # 4. El comando que Uvicorn debe ejecutar (CMD del Dockerfile, repetido aquí para claridad).
     command: uvicorn main:app --host 0.0.0.0 --port 8000
     
-    # 5. Política de reinicio.
     restart: always
 
 version: '3.8'

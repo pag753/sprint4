@@ -1,15 +1,7 @@
-# Ignorar archivos del modelo (demasiado grandes para Git)
-# Recomendación: subir solo si son menores a 50MB, si no, usar Git LFS o ignorar
 *.pkl
 *.joblib
-
-# Ignorar caché y compilados
 __pycache__/
 *.pyc
-
-# Ignorar entornos virtuales de Python
 venv/
 .venv/
-
-# Ignorar caché de Docker Compose/TrueNAS
 .DS_Store

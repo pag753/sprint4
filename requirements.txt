@@ -1,4 +1,3 @@
-# Lista de dependencias
 pandas
 numpy
 scikit-learn
